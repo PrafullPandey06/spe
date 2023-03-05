@@ -1,0 +1,25 @@
+pipeline {
+agent any
+    stages {
+      stage('Clone Git') {
+            steps {
+                git 'https://github.com/BThangaraju/Jenkins.git'
+            //echo "this is git cloning stage"
+            }
+        }
+      stage('Build Code') {
+        steps {
+                 sh "chmod u+x Prog1.py"
+                 sh "python3 Prog1.py"
+                //echo "this is build stage"
+            }
+        }
+      stage('Test Code') {
+        steps {
+                 sh "chmod u+x Test.py"
+                 sh "./Test.py"
+               // echo "this is test state"
+        }
+    }
+ }  
+}
