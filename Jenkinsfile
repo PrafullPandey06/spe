@@ -4,21 +4,18 @@ agent any
       stage('Clone Git') {
             steps {
                 git 'https://github.com/PrafullPandey06/spe'
-            //echo "this is git cloning stage"
             }
         }
       stage('Build Code') {
         steps {
                  sh "chmod u+x Prog.py"
                  sh "python3 Prog.py"
-                //echo "this is build stage"
             }
         }
       stage('Test Code') {
         steps {
                  sh "chmod u+x Test.py"
                  sh "./Test.py"
-               // echo "this is test state"
         }
     }
  }  
