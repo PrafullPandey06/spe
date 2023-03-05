@@ -3,13 +3,13 @@ agent any
     stages {
         stage('Clone Git') {
             steps {
-                git ''
+                git 'https://github.com/PrafullPandey06/spe.git'
             }
         }
         stage('Build Code') {
             steps {
-                sh "chmod u+x Prog1.py"
-                sh "python3 Prog1.py"
+                sh "chmod u+x Prog.py"
+                sh "python3 Prog.py"
             }
         }
         stage('Test Code') {
