@@ -1,22 +1,22 @@
 pipeline {
 agent any
     stages {
-      stage('Clone Git') {
+        stage('Clone Git') {
             steps {
-                git 'https://github.com/PrafullPandey06/spe'
+                git ''
             }
         }
-      stage('Build Code') {
-        steps {
-                 sh "chmod u+x Prog.py"
-                 sh "python3 Prog.py"
+        stage('Build Code') {
+            steps {
+                sh "chmod u+x Prog1.py"
+                sh "python3 Prog1.py"
             }
         }
-      stage('Test Code') {
-        steps {
-                 sh "chmod u+x Test.py"
-                 sh "./Test.py"
+        stage('Test Code') {
+            steps {
+                sh "chmod u+x Test.py"
+                sh "./Test.py"
+            }
         }
     }
- }  
 }
