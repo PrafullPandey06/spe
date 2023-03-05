@@ -3,14 +3,14 @@ agent any
     stages {
       stage('Clone Git') {
             steps {
-                git 'https://github.com/BThangaraju/Jenkins.git'
+                git 'https://github.com/PrafullPandey06/spe'
             //echo "this is git cloning stage"
             }
         }
       stage('Build Code') {
         steps {
-                 sh "chmod u+x Prog1.py"
-                 sh "python3 Prog1.py"
+                 sh "chmod u+x Prog.py"
+                 sh "python3 Prog.py"
                 //echo "this is build stage"
             }
         }
